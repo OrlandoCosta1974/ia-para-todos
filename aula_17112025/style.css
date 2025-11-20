@@ -1,0 +1,115 @@
+﻿/* Importacao de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap');
+
+:root {
+    --primary-gradient: linear-gradient(90deg, #6A11CB 0%, #2575FC 100%);
+    --primary-color: #6A11CB;
+    --primary-color-start: #6A11CB;
+    --primary-color-end: #2575FC;
+    --dark-bg: #121212;
+    --dark-surface: #1E1E1E;
+    --light-text: #EAEAEA;
+    --secondary-text: #A0A0A0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding-top: 80px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--light-text);
+}
+
+p, .lead {
+    color: var(--secondary-text);
+}
+
+.light-text {
+    color: var(--light-text);
+}
+
+.btn-primary {
+    background-image: var(--primary-gradient);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-custom {
+    background-color: #e0e0e0;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-custom .nav-link, .navbar-custom .navbar-brand {
+    color: #111 !important;
+}
+
+.navbar-custom .nav-link:hover, .navbar-custom .nav-link.active {
+    color: #000 !important;
+}
+
+.navbar-toggler {
+    border-color: #444;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.card {
+    background-color: var(--dark-surface);
+    border: 1px solid #2a2a2a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Títulos e ícones dos cartões em branco para melhor contraste */
+.card .card-title {
+    color: var(--light-text) !important;
+}
+.card .fa-solid,
+.card .fa-regular,
+.card .fa-light,
+.card .fa-duotone {
+    color: var(--light-text) !important;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.bg-light {
+    background-color: var(--dark-surface) !important;
+}
+
+.footer-custom {
+    background-color: var(--dark-surface);
+}
+
+/* Banners das páginas internas */
+.page-hero {
+    padding: 120px 0 90px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.55) 100%);
+}
+.page-hero .container {
+    position: relative;
+    z-index: 1;
+}
