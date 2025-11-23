@@ -355,14 +355,24 @@ a {
     color: rgba(148, 163, 184, 0.6);
 }
 
-/* Fix autocomplete white background */
+/* Fix autocomplete white background - Stronger version */
 .form-control:-webkit-autofill,
 .form-control:-webkit-autofill:hover,
 .form-control:-webkit-autofill:focus,
 .form-control:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px rgba(15, 23, 42, 0.9) inset !important;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: var(--text-main) !important;
-    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 0 1000px rgba(15, 23, 42, 0.9) !important;
+    background-color: rgba(15, 23, 42, 0.9) !important;
+    caret-color: var(--text-main);
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--text-main) !important;
+    box-shadow: inset 0 0 0 1000px rgba(15, 23, 42, 0.9) !important;
 }
 
 .form-label {
